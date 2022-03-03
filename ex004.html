@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+    <style>
+        body {
+            background-color: rgb(127, 0, 231);
+            color: white;
+            font: normal 25pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudo DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprenda a usar o <strong>DOM</strong> em <em>JavaScript</em></p>
+    <div id="msg">Click aqui!!!</div>
+    <p id="nome">Décio Santana de Aguiar</p>
+    <div class="local">Condomínio Parque dos Sonhos</div>
+    <div class="local">Campo Grande</div>
+    <div class="local">Rio de Janeiro</div>
+    
+    <script>
+        // altera cor do corpo "body"
+        /* var corpo = document.body
+        corpo.style.background = 'red' */
+
+        var p1 = document.getElementsByTagName('p')[0]; //atribui variavel p1 ao primeiro paragrafo
+        var p2 = document.getElementsByTagName('p')[1]; //atribui variavel p2 ao primeiro paragrafo
+        const d = document.getElementById('msg')
+        p1.style.textAlign = 'center'; // alterar posição da variavel
+        p2.style.color = 'black'; // alterar cor da variavel
+        document.write('<br>' + p2.innerText) // "p2.innerText" conteudo do segundo paragrafo "String"
+        document.write('<br>' + p2.innerHTML) // "p2.innerText" conteudo da Tag <p> do segundo paragrafo
+        d.innerText = 'Texto alterado' // Alterar texto do (id = 'msg')
+        document.getElementById('nome').innerText = 'Ana Rosa Nogueira Aguiar' // Altera texto do (id = 'nome')
+        document.getElementById('nome').style.textAlign = 'center'; // Altera posição do (id = 'nome')
+        document.getElementById('nome').style.color = 'black'; // Altera cor do (id = 'nome')
+
+        // document.getSelection("div.local") <=> para "class" e document.getSelection("div#local") para "id"
+        document.querySelector("div.local").style.backgroundColor = "red"; 
+        
+        // alterar cor apartir da class
+        var local = document.getElementsByClassName('local')
+        local[2].style.backgroundColor = "black";
+
+        // alterar cor apartir da Tag
+        for (var cont=0; cont <= 1; cont++) {
+            document.getElementsByTagName('p')[cont].style.backgroundColor = "green";
+            
+        }
+    </script>
+</body>
+</html>

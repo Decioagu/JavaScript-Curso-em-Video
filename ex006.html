@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interação com mouse 02</title>
+    <style>
+        body {
+            background-color: rgb(127, 0, 231);
+            color: white;
+            font: normal 25pt Arial;
+        }
+        #area {
+            position: absolute;
+            top: 30vh;
+            left: 40vw;
+            font: normal 20pt Arial;
+            background: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        Interaja...    
+    </div>
+    
+    <!-- interação com "area" e mouse pelo JavaScript-->
+    <script>
+        var mouse = document.getElementById('area')
+        mouse.addEventListener('click', clicar)
+        mouse.addEventListener('mouseenter', entrar)
+        mouse.addEventListener('mouseout', sair)
+
+        function clicar() {
+            mouse.innerText = 'Clicou!!!';
+            mouse.style.background = 'red';
+        }
+        function entrar() {
+            mouse.innerText = 'Entrou!!';
+        }
+        function sair() {
+            mouse.innerText = 'Saiu!';
+            mouse.style.background = 'green';
+        }
+              
+    </script>
+</body>
+</html>

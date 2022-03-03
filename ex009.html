@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swicth</title>
+    <style>
+        body {
+            background-color: rgb(101, 185, 241);
+            color: white;
+            font: normal 1.2em Arial;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Dia da semana</h1>    
+
+    <script>
+        // tomada de decisão conforme Data do relógio interno
+        switch (new Date().getDay()) {
+            case 0:
+                day = "Domigo";
+                break;
+            case 1:
+                day = "Segunda";
+                break;
+            case 2:
+                day = "Treça";
+                break;
+            case 3:
+                day = "Quarta";
+                break;
+            case 4:
+                day = "Qinta";
+                break;
+            case 5:
+                day = "Sexta";
+                break;
+            case 6:
+                day = "Sabado";
+                break;
+            default:
+                text = "Não existe esa opção!";
+        }
+        document.write(`Hoje é ${day}!!!`)
+            /* 
+            0 = "Domigo";
+            1 = "Segunda";
+            2 = "Treça";
+            3 = "Quarta";
+            4 = "Qinta";
+            5 = "Sexta";
+            6 = "Sabado"; 
+            */
+    </script>
+</body>
+</html>

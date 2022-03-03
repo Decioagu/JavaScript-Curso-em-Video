@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma de valores</title>
+    <style>
+        body {
+            background-color: rgb(127, 0, 231);
+            color: white;
+            font: normal 1.2em Arial;
+            text-align: center;
+        }
+        input {
+            font-size: 1.5em;
+        }
+        label {
+            font-size: 1.em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somandos valores</h1>
+    <input type="number" name="n1" id="n1">
+    +
+    <input type="number" name="n2" id="n2">
+    <input type="button" value="soma" onclick="soma()"> <!-- ativa a função em JavaScript -->
+    <br>
+
+
+    <!-- legenda para um item em uma interface de usuário. Ele pode estar associado com um elemento de controle -->
+    <label for="">Resultado:</label>
+
+    <input type="text" id="resultado" value=0> <!-- saida do resultado -->
+    
+    <script>
+        
+        /* função */
+        function soma() {
+            // entrada
+            var num1 = document.getElementById("n1");
+            var num2 = document.querySelector('input#n2');
+            var res = document.getElementById('resultado');
+
+            // processamento
+            var n1 = parseFloat(num1.value) ;// "value" da variavel "num1" convertido para "Float"
+            var n2 = parseFloat(num2.value); // "value" da variavel "num2" convertido para "Float"
+            var s = n1 + n2;
+
+            /* saida de dados na tela do usuário */
+            document.getElementById("resultado").value = s;          
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversão de tipos e variáves</title>
+    <style>
+        body {
+            background-color: aquamarine;
+            color: white;
+            font: normal 20pt Arial;
+        }
+        p {
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo!</h1>
+
+    <script>
+        var n1 = prompt('Digite um número:')
+        var n2 = prompt('Digite outro número:')
+        // conversão de tipo "n1=inteiro" e "n2=ponto flutuante" <> também existe a função "Nunber(n)"
+        var soma = parseInt(n1) + parseFloat(n2) 
+        alert(`A soma  ${n1} + ${n2} = ${soma}`)
+        /* conversão para String <> "String(n)" ou n."toString"  */
+    </script>
+    
+</body>
+</html>

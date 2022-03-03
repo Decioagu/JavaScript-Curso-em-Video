@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de idde e sexo</title>
+    <link rel="stylesheet" href="style.css"> <!-- CSS -->
+</head>
+<body>
+    <header>
+        <h1>Verificador de idde e sexo</h1>
+    </header>
+    <section>
+        <div>
+            <p>
+                Ano de nacsimento:
+                <input type="number" name="ano" id="ano" min="1" value="0" autofocus> <!-- "autofocus" campo para iserir dado pre-selecionado -->
+            </p>
+
+            <p>
+               Sexo:
+               <input type="radio" name="sexo" id="H" checked> <!-- "checked" opeção pre-selecionada -->
+               <label for="H">Homem</label>
+               <input type="radio" name="sexo" id="M">
+               <label for="M">Mulher</label>
+            </p>
+
+            <p><input type="button" value="Verificar" onclick="analise()"></p> <!-- botão de ação -->
+        </div>
+        <br>
+        <div id='res'>Preencha os dados acima e veja o resultado!</div> <!-- resposta ao usuario -->
+    </section>
+    <footer><p>&copy; Décio Santana de Aguiar</p></footer>
+
+    <script src="script.js"></script> <!-- programação JavaScript -->
+</body>
+</html>
