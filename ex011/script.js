@@ -25,8 +25,8 @@ function analise(){
             res.innerHTML = `${genero} de ${idade} ano<br><br>`;
         } else { res.innerHTML = `${genero} de ${idade} anos<br><br>`;}
         
-        // inserir foto pelo JavaScript <=> sem descrever no HTML
-        img.setAttribute('id', 'foto');
+        // cria "novo elemento" pelo JavaScript no HTML
+        img.setAttribute('id', 'foto'); 
        
         // imagem conforme "sexo" e "idade"
         if (sexo[0].checked){
@@ -60,6 +60,6 @@ function analise(){
         }
 
         // exibir foto no site conforme seleção de imagem "img"
-        res.appendChild(img)
+        res.appendChild(img) // exibição do "novo elemento"
     }
 }
