@@ -1,0 +1,25 @@
+body {
+    background-color: rgb(0, 0, 255);
+    font: normal 1.2em Arial;
+    
+}
+
+header {
+    color: white;
+    text-align: center;
+}
+
+section {
+    background-color: rgb(212, 212, 212);
+    border-radius: 10px;
+    padding: 30px; /* expande verticalmente a área da caixa */
+    width: 500px;
+    margin: auto; /* centraliza caixa */
+    box-shadow: 3px 3px 10px rgb(77, 79, 80); /* sobreamento na caixa */
+}
+
+footer {
+    color: white;
+    font-style: italic;
+    text-align: center;
+}
