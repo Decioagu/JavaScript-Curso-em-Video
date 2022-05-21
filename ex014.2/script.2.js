@@ -30,7 +30,7 @@ function adicionar(){
             lista.push(n)
             // (etapa 3) adiciona valor 
             valorNum.innerHTML = `Valo ${n} adicionado`
-            // (etapa 4) exibir novo elemento
+            // (etapa 4) exibir novo elemento no id="res" no HTML
             listaValores.appendChild(valorNum)
         } else { alert('[ERRO] Valores repetidos não são adicionados na lista'); }
         analisarLista = false // Sempre voltar a condição inicial   
