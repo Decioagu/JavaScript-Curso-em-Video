@@ -24,7 +24,7 @@ function adicionar(){
         // (etapa 1) cria "novo elemento" pelo JavaScript no HTML na Tag "option" (Tag conforme escolha)
         let valorNum = document.createElement('option'); // https://www.youtube.com/watch?v=eC-z9oHLzBc
 
-        // (etapa 2 - Opcional) limpa Tag "option" caso hajá texto pre existente
+        // (etapa 2 - Opcional) limpa Tag "option" caso hajá texto pre existente 
         if (lista.length == 0) {
             listaValores.innerHTML = ''
         }
@@ -35,11 +35,14 @@ function adicionar(){
             lista.push(n)
             // (etapa 3) adiciona valor 
             valorNum.innerHTML = `Valo ${n} adicionado`
-            // (etapa 4) exibir novo elemento
+            // (etapa 4) exibir novo elemento no id="res" no HTML
             listaValores.appendChild(valorNum)
+            res.innerHTML = ''
         } else {alert('[ERRO] Valores repetidos não são adicionados na lista');}
         analisarLista = false // Sempre voltar a condição inicial   
     }
+    num.value = ''
+    num.focus()
 }
 
 function resultado() {
@@ -57,7 +60,7 @@ function resultado() {
         }
     }
     
-    if (lista == 0) {
+    if (lista.length == 0) {
         alert('[ERRO] Não foi adicionado valores para calcular');
     } else {
         res.innerHTML = `Lista = [${lista}]`
@@ -68,4 +71,12 @@ function resultado() {
         // variavel.toFixed(quantidade) <=> numero de casas decimais
         res.innerHTML += `<p>A média dos valores é  ${(soma/lista.length).toFixed(2)}</p>` 
     }  
+}
+
+function listaDeValores() {
+    num.value = ''
+    num.focus()
+    lista = []
+    res.innerHTML = ''
+    listaValores.innerHTML = ''
 }
